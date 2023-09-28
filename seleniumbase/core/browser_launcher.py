@@ -704,6 +704,8 @@ def _set_chrome_options(
     prefs["profile.default_content_settings.popups"] = 0
     prefs["profile.managed_default_content_settings.popups"] = 0
     prefs["profile.default_content_setting_values.automatic_downloads"] = 1
+    # hide 'change address' popup
+    prefs["autofill.profile_enabled"] = False
     if locale_code:
         prefs["intl.accept_languages"] = locale_code
     if block_images:
